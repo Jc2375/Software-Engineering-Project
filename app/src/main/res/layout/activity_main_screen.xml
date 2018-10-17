@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vam1994.speedbytedemo.MainScreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SpeedByte"
+        android:textColor="@color/white"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:textSize="30dp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="customer"
+        android:id="@+id/customerButton"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/waiterButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manager"
+        android:id="@+id/managerButton"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/customerButton"
+        android:layout_alignStart="@+id/customerButton"
+        android:layout_alignEnd="@+id/customerButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Host"
+        android:id="@+id/hostButton"
+        android:layout_below="@+id/managerButton"
+        android:layout_alignStart="@+id/managerButton"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chef"
+        android:id="@+id/chefButton"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/hostButton"
+        android:layout_alignStart="@+id/hostButton"
+        android:layout_alignEnd="@+id/waiterButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waiter/Server"
+        android:id="@+id/waiterButton"
+        android:layout_below="@+id/chefButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Busboy"
+        android:id="@+id/busboyButton"
+        android:layout_below="@+id/waiterButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="27dp"
+        android:layout_alignStart="@+id/waiterButton" />
+</RelativeLayout>

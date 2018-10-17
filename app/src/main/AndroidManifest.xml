@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vam1994.speedbytedemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Dark">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainScreen" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".Menu" />
+        <activity android:name=".MenuAdapter" />
+        <activity android:name=".ReservationTime" />
+        <activity android:name=".TableAvailability" />
+        <activity android:name=".TableReservation" />
+        <activity android:name=".TablesImage" />
+        <activity android:name=".ThreeDiningOptions" />
+        <activity android:name=".Chef" />
+        <activity android:name=".Waiter" />
+        <activity android:name=".Message" />
+        <activity android:name=".ManagerOptions" />
+        <activity android:name=".ManagerEditItem" />
+        <activity android:name=".ManagerEditEmployee" />
+        <activity android:name=".ManagerStatistics" />
+        <activity android:name=".ManagerInventory" />
+        <activity android:name=".ManagerTraffic" />
+        <activity android:name=".ManagerProfits" />
+        <activity android:name=".RatingPage" />
+        <activity android:name=".Busboy" />
+        <activity android:name=".Payment"></activity>
+    </application>
+
+</manifest>

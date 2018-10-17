@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SpeedByteDemo</string>
+    <string name="view_tables"><u>(View Seating Chart)</u></string>
+    <string name="availability"><u>Availability</u></string>
+    <string name="orderstatus"><u>Order Status</u></string>
+    <string name="tablestatus"><u>Table Status</u></string>
+    <string name="selectatime"><u>Select Time</u></string>
+
+    <string-array name="To">
+        <item>Chef</item>
+        <item>Manager</item>
+        <item>Waiter/Server</item>
+        <item>Busboy</item>
+        <item>Host</item>
+    </string-array>
+
+    <string-array name="Message">
+        <item>The food is done</item>
+        <item>There is a faulty equipment</item>
+        <item>Fire drill</item>
+        <item>The inventory is updated</item>
+        <item>No Power is the restaurant</item>
+        <item>All deliveries have been made</item>
+    </string-array>
+
+
+    <string name="submit_rating">Submit Rating</string>
+    <string name = "place_order">Place Order</string>
+
+
+</resources>
