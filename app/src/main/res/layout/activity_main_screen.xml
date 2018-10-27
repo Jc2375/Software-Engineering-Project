@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.vam1994.speedbytedemo.MainScreen">
+    tools:context="com.example.vam1994.whyw8.MainScreen">
 
     <TextView
         android:layout_width="wrap_content"

@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
-    tools:context="com.example.vam1994.speedbytedemo.SignUpActivity">
+    tools:context="com.example.vam1994.whyw8.SignUpActivity">
 
     <LinearLayout
         android:orientation="vertical"

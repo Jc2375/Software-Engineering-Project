@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vam1994.speedbytedemo.Payment">
+    tools:context="com.example.vam1994.whyw8.Payment">
 
     <TextView
             android:id = "@+id/paymentText"

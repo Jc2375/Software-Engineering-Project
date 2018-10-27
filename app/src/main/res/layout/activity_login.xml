@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true"
-    tools:context="com.example.vam1994.speedbytedemo.LoginActivity">
+    tools:context="com.example.vam1994.whyw8.LoginActivity">
 
     <LinearLayout
             android:orientation="vertical"

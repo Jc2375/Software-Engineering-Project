@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="64dp"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.vam1994.speedbytedemo.ManagerProfits">
+    tools:context="com.example.vam1994.whyw8.ManagerProfits">
 
     <TextView
         android:id="@+id/title_traffic"
