@@ -1,17 +1,14 @@
 package com.example.vam1994.whyw8;
 
 /**
- * Created by tillu on 4/18/2017.
+ * Created by sdimitrovski95
  */
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -22,19 +19,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.gson.Gson;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -45,8 +32,7 @@ import butterknife.ButterKnife;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
-    private ProgressBar progressBar;
-    public static String password = "", email = "";
+    //private ProgressBar progressBar;
     FirebaseAuth auth;
 
     /**
@@ -66,10 +52,6 @@ public class LoginActivity extends AppCompatActivity {
      */
     @Bind(R.id.link_signup) TextView signupLink;
 
-    public static class LoginOutput {
-        int status;
-        String result;
-    }
 
     /**
      * Allow user to login
@@ -85,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailText.getText().toString();
+                final String email = emailText.getText().toString();
                 final String password = passwordText.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
@@ -110,15 +92,42 @@ public class LoginActivity extends AppCompatActivity {
                         // progressBar.setVisibility(View.GONE);
                         if (!task.isSuccessful()) {
                             // there was an error
-                            if (password.length() < 6) {
+                            if (!passwordChecked()) {
                                 passwordText.setError("Minimum Password Length is 6 Characters");
                             } else {
-                                Toast.makeText(LoginActivity.this, "Failed", Toast.LENGTH_LONG).show();
+                                onLoginFailed();
                             }
                         } else {
-                            Toast.makeText(LoginActivity.this, "HERE", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LoginActivity.this, ThreeDiningOptions.class);
-                            startActivity(intent);
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                            if(email.equals("tim@mail.com")){
+                                Intent intent = new Intent(LoginActivity.this, ThreeDiningOptions.class);
+                                startActivity(intent);
+                            }
+
+                            else if(email.equals("chef@mail.com")){
+                                Intent intent = new Intent(LoginActivity.this, Chef.class);
+                                startActivity(intent);
+                            }
+
+                            else if(email.equals("manager@mail.com")){
+                                Intent intent = new Intent(LoginActivity.this, ManagerOptions.class);
+                                startActivity(intent);
+                            }
+
+                            else if(email.equals("waiter@mail.com")){
+                                Intent intent = new Intent(LoginActivity.this, Waiter.class);
+                                startActivity(intent);
+                            }
+
+                            else if(email.equals("busboy@mail.com")){
+                                Intent intent = new Intent(LoginActivity.this, Busboy.class);
+                                startActivity(intent);
+                            }
+
+                            else{
+                                Toast.makeText(getApplicationContext(), "User not registered with base", Toast.LENGTH_LONG);
+                            }
+
                             finish();
                         }
                     }
@@ -137,48 +146,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Initiate Login.
-     */
-    public void login() {
-        if (passwordChecked()) {
-            //loginButton.setEnabled(false); //find me1 sss
-
-            final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);//this is cool
-            progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authenticating User...");
-            progressDialog.show();
-
-            email = emailText.getText().toString();
-            password = passwordText.getText().toString();
-
-            auth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            // If sign in fails, display a message to the user. If sign in succeeds
-                            // the auth state listener will be notified and logic to handle the
-                            // signed in user can be handled in the listener.
-                            progressBar.setVisibility(View.GONE);
-                            if (!task.isSuccessful()) {
-                                // there was an error
-                                if (password.length() < 6) {
-                                    passwordText.setError("Minimum Password Length is 6 Characters");
-                                } else {
-                                    Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_LONG).show();
-                                }
-                            } else {
-                                Intent intent = new Intent(LoginActivity.this, ThreeDiningOptions.class);
-                                startActivity(intent);
-                                finish();
-                            }
-                        }
-                    });
-        } else {
-            // error message
-            onLoginFailed();
-        }
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -224,7 +191,7 @@ public class LoginActivity extends AppCompatActivity {
             emailText.setError(null);
         }
 
-        if(pass.isEmpty() || pass.length() < 8 || pass.length() > 12){
+        if(pass.isEmpty() || pass.length() < 6 || pass.length() > 12){
             passwordText.setError("password must be between 8 and 12 alphanumeric characters");
             isValid = false;
         }
