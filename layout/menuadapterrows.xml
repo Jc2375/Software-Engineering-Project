@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/menuItem"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:layout_alignEnd="@+id/setRating"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <RatingBar
+        android:id="@+id/setRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menuItem"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-1dp"
+        android:maxWidth="10dp"
+        android:minWidth="10dp"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="63dp"
+        android:layout_height="58dp"
+        android:layout_alignStart="@+id/setRating"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="121dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="63dp"
+        android:layout_height="58dp"
+        android:layout_alignBottom="@+id/plus"
+        android:layout_marginStart="-58dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_toEndOf="@+id/setRating"
+        android:text="-"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="100dp"
+        android:layout_height="58dp"
+        android:layout_alignTop="@+id/sub"
+        android:layout_alignParentStart="true"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+</RelativeLayout>
