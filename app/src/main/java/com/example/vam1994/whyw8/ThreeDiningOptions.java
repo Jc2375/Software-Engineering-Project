@@ -17,7 +17,7 @@ public class ThreeDiningOptions extends AppCompatActivity {
     static Button dineIn;
     static Button viewMenu;
     static Button takeOut;
-
+    static Button logout;
     /**
      * Give user 3 options to pick from
      * @param savedInstanceState
@@ -30,10 +30,11 @@ public class ThreeDiningOptions extends AppCompatActivity {
         dineIn = (Button)findViewById(R.id.dineInButton);
         viewMenu = (Button)findViewById(R.id.viewMenuButton);
         takeOut = (Button)findViewById(R.id.takeoutButton);
-
+        logout= (Button) findViewById(R.id.logout);
         clickDineIn();
         clickViewMenu();
         clickTakeOut();
+        clickLogoutOut();
     }
 
     /**
@@ -64,6 +65,16 @@ public class ThreeDiningOptions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ThreeDiningOptions.this, Menu.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void clickLogoutOut(){
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThreeDiningOptions.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
