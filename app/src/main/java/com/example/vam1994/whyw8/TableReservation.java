@@ -3,6 +3,7 @@ package com.example.vam1994.whyw8;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -37,7 +38,8 @@ public class TableReservation extends AppCompatActivity {
         lv = (ListView)findViewById(R.id.listView);
         tv = (TextView)findViewById(R.id.textViewNext);
 
-        String[] tables = {"Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6", "Table 7", "Table 8", "Table 9", "Table 10", "Table 11", "Table 12", "Table 13", "Table 14", "Table 15"};
+        //String[] tables = {"Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6", "Table 7", "Table 8", "Table 9", "Table 10", "Table 11", "Table 12", "Table 13", "Table 14", "Table 15"};
+        String[] tables = {"Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, tables);
         lv.setAdapter(adapter);
@@ -45,7 +47,11 @@ public class TableReservation extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(TableReservation.this, Menu.class);
+                //Intent intent = new Intent(TableReservation.this, Menu.class);
+                Log.d("myTag","id: "+Long.toString(id+1));//DELETE
+                Intent intent = new Intent(TableReservation.this, QRScanWindow.class);
+                String tableNumStr = Long.toString(id+1);
+                intent.putExtra("tableNumStr",tableNumStr);
                 startActivity(intent);
             }
         });

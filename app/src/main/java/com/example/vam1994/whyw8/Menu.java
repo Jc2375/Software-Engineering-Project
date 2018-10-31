@@ -21,7 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
 import java.util.List;
+//Below Testing
+//import android.widget.GridLayout.LayoutParams;
+import android.view.ViewGroup.LayoutParams;
+//Above Testing
 
 /**
  * The type Menu.
@@ -81,6 +86,12 @@ public class Menu extends AppCompatActivity {
         ListAdapter listAdapter = new MenuAdapter(this, menu);
 
         listViewMenu.setAdapter(listAdapter);
+
+        //Below Testing!
+        LayoutParams params = listViewMenu.getLayoutParams();
+        params.width = 600;
+        listViewMenu.setLayoutParams(params);
+        //Above Testing!
 
 
 

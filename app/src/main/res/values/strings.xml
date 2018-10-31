@@ -27,5 +27,9 @@
     <string name="submit_rating">Submit Rating</string>
     <string name = "place_order">Place Order</string>
 
+    <string name="open_camera">Open Camera</string>     //Added by Michael Haas
+    <string name="take_barcode_picture">Take Barcode Picture</string>     //Added by Michael Haas
+    <string name="scan_barcode">Scan Barcode</string>     //Added by Michael Haas
+
 
 </resources>
