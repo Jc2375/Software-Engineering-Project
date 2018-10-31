@@ -18,18 +18,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86cb5097-ec39-453f-b97a-ac55bcb77899" name="Default" comment="Version 2 with working menu">
+    <list default="true" id="86cb5097-ec39-453f-b97a-ac55bcb77899" name="Default" comment="Merge branch 'master' of https://github.com/SE-Group-4/Why-W8&#10;&#10;# Conflicts:&#10;#&#9;app/src/main/java/com/example/vam1994/whyw8/OrderedItem.java">
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/ThreeDiningOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/ThreeDiningOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_three_dining_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_three_dining_options.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,6 +78,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreeDiningOptions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThreeDiningOptions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/ThreeDiningOptions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="87">
               <caret line="82" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
@@ -2438,7 +2448,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/speedbytedemo/LoginActivity.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listfood.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/MenuItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/FoodItem.java" />
@@ -2457,6 +2466,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/RatingPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_three_dining_options.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/ThreeDiningOptions.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java" />
       </list>
     </option>
   </component>
@@ -2733,7 +2743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540951098089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Version 2 with working menu">
+      <created>1540952896341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540952896341</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2755,17 +2772,17 @@
       <window_info id="Image Layers" order="7" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.28214827" side_tool="true" weight="0.34158415" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.3517398" side_tool="true" visible="true" weight="0.14686468" />
       <window_info anchor="right" id="Preview" order="8" weight="0.24205749" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969743" weight="0.32838285" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4977307" weight="0.32838285" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" weight="0.32838285" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6376702" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.64826024" visible="true" weight="0.14686468" />
       <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.4977307" weight="0.24092409" />
       <window_info id="Captures" order="4" weight="0.24962178" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3290469" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.71785176" visible="true" weight="0.22937293" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.71785176" weight="0.22937293" />
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
@@ -3190,16 +3207,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_screen.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3210,8 +3217,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/ThreeDiningOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="87">
           <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vam1994/whyw8/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         } else {
                             Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
-                            if(email.equals("tim@mail.com")){
+                            if(email.equals("customer@mail.com")){
                                 Intent intent = new Intent(LoginActivity.this, ThreeDiningOptions.class);
                                 startActivity(intent);
                             }
