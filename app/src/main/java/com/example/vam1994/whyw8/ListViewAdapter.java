@@ -61,7 +61,8 @@ public class ListViewAdapter extends ArrayAdapter<FoodItem> {
         holder.ratingBar.setOnRatingBarChangeListener(onRatingChangedListener(holder, position));
 
         holder.ratingBar.setTag(position);
-        holder.ratingBar.setRating(getItem(position).getRating());
+        //holder.ratingBar.setRating(getItem(position).getRating());
+
         holder.movieName.setText(getItem(position).getName());
 
         return convertView;
@@ -88,7 +89,7 @@ public class ListViewAdapter extends ArrayAdapter<FoodItem> {
          * @param view the view
          */
         public ViewHolder(View view) {
-            ratingBar = (RatingBar) view.findViewById(R.id.rate_img);
+            ratingBar = (RatingBar) view.findViewById(R.id.rate_img2);
             movieName = (TextView) view.findViewById(R.id.text);
         }
     }

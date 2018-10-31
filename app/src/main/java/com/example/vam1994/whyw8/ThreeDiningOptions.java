@@ -15,6 +15,8 @@ public class ThreeDiningOptions extends AppCompatActivity {
      * The Dine in.
      */
     static Button dineIn;
+    static Button viewMenu;
+    static Button takeOut;
 
     /**
      * Give user 3 options to pick from
@@ -26,8 +28,12 @@ public class ThreeDiningOptions extends AppCompatActivity {
         setContentView(R.layout.activity_three_dining_options);
 
         dineIn = (Button)findViewById(R.id.dineInButton);
-        clickDineIn();
+        viewMenu = (Button)findViewById(R.id.viewMenuButton);
+        takeOut = (Button)findViewById(R.id.takeoutButton);
 
+        clickDineIn();
+        clickViewMenu();
+        clickTakeOut();
     }
 
     /**
@@ -38,6 +44,26 @@ public class ThreeDiningOptions extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ThreeDiningOptions.this, ReservationTime.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void clickViewMenu(){
+        viewMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThreeDiningOptions.this, Menu.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void clickTakeOut(){
+        takeOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ThreeDiningOptions.this, Menu.class);
                 startActivity(intent);
             }
         });

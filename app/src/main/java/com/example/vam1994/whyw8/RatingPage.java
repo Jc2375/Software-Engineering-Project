@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -93,7 +94,6 @@ public class RatingPage extends AppCompatActivity {
 
                 TextView name = (TextView) dialog.findViewById(R.id.item_name);
                 TextView starRate = (TextView) dialog.findViewById(R.id.rate);
-
                 FoodItem movie = (FoodItem) parent.getAdapter().getItem(position);
                 name.setText("Food Item name: " + movie.getName());
                 starRate.setText("Your rate: " + movie.getRating());

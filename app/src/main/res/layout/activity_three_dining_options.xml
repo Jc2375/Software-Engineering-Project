@@ -32,14 +32,14 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+        android:id="@+id/viewMenuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delivery"
-        android:id="@+id/deliveryButton"
-        android:layout_marginTop="110dp"
         android:layout_alignTop="@+id/takeoutButton"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="110dp"
+        android:text="VIEW MENU" />
 
 
 </RelativeLayout>
