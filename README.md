@@ -2,12 +2,21 @@
 
 Restaurant Automation App
 
-## Usage
+## Running the Application
+
+* Clone Github repository and import project into Android Studio
+* Import missing SDK packages
+* Sync the Gradle
+* Click the “Run” button to run the app
+* Add an emulator to run the app on, if not already available
+* Log into an account and test the app as you wish
+
+## Using the Application
 
 After running the application, you will be prompted to login with a username and password:
 
-* Manager: {manager@mail.com, man_pass}
-* Chef: {chef@mail.com, test_pass}
-* Busboy: {busboy@mail.com, bus_pass}
-* Server/Waiter: waiter@mail.com, wait_pass}
-* Customer: {tim@mail.com, tim_pass}
+* Customer: {customer@mail.com, password}
+* Manager: {manager@mail.com, password}
+* Chef: {chef@mail.com, password}
+* Busboy: {busboy@mail.com, password}
+* Server/Waiter: {waiter@mail.com, password}
