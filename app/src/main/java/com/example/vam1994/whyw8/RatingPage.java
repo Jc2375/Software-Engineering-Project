@@ -81,6 +81,15 @@ public class RatingPage extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+        Button revert = (Button) findViewById(R.id.dessert);
+        revert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RatingPage.this, Menu.class);
+                startActivity(intent);
+            }
+            });
     }
 
     private AdapterView.OnItemClickListener onItemClickListener() {

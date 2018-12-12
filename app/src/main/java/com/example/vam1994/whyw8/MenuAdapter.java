@@ -27,15 +27,18 @@ public class MenuAdapter extends ArrayAdapter<OrderedItem>{
      * @param resource the resource
      */
     static String ordername;
-    static Context mcontext;
+    Context mcontext;
     static ViewGroup mparent;
     static TextView ordertotal;
-
+    ArrayList<OrderedItem> menu;
+    ArrayAdapter<OrderedItem> adapter;
     static int pos;
+    TextView ordert;
 
     public MenuAdapter(Context context, ArrayList<OrderedItem> resource){
         super(context, R.layout.menuadapterrows, resource);
         mcontext= context;
+        menu= resource;
     }
 
     public View getView(final int position, View convertView, ViewGroup parent){
@@ -69,7 +72,7 @@ public class MenuAdapter extends ArrayAdapter<OrderedItem>{
             @Override
             public void onClick(View view) {
                 //ordername= Menu.menuItems[position];
-                OrderedItem sel= Menu.menu.get(position);
+                OrderedItem sel= menu.get(position);
                 boolean found= false;
                 for(int i=0; i<Menu.ordered.size();i++) {
                     if (Menu.ordered.get(i).food.equals(sel.food)) {
@@ -90,7 +93,7 @@ public class MenuAdapter extends ArrayAdapter<OrderedItem>{
                 String settotal= "$" + s;
                 TextView ordert= (TextView) view.getRootView().findViewById(R.id.ordertotal);
                 ordert.setText(settotal);
-                ArrayAdapter<OrderedItem> adapter = new ArrayAdapter<OrderedItem>(Menu.mcontext, android.R.layout.simple_list_item_1, Menu.ordered);
+                ArrayAdapter<OrderedItem> adapter = new ArrayAdapter<OrderedItem>(mcontext, android.R.layout.simple_list_item_1, Menu.ordered);
 
                 Menu.orderedtotal.setAdapter(adapter);
 
@@ -100,7 +103,7 @@ public class MenuAdapter extends ArrayAdapter<OrderedItem>{
             @Override
             public void onClick(View view) {
                 //ordername= Menu.menuItems[pos];
-                OrderedItem sel= Menu.menu.get(position);
+                OrderedItem sel= menu.get(position);
                 for(int i=0; i<Menu.ordered.size();i++){
                     if(Menu.ordered.get(i).food.equals(sel.food)){
                         if(Menu.ordered.get(i).quantity<=1){
@@ -119,7 +122,7 @@ public class MenuAdapter extends ArrayAdapter<OrderedItem>{
                 String settotal= "$" + s;
                 TextView ordert= (TextView) view.getRootView().findViewById(R.id.ordertotal);
                 ordert.setText(settotal);
-                ArrayAdapter<OrderedItem> adapter = new ArrayAdapter<OrderedItem>(Menu.mcontext, android.R.layout.simple_list_item_1, Menu.ordered);
+                ArrayAdapter<OrderedItem> adapter = new ArrayAdapter<OrderedItem>(mcontext, android.R.layout.simple_list_item_1, Menu.ordered);
                 Menu.orderedtotal.setAdapter(adapter);
 
             }

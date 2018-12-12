@@ -47,6 +47,7 @@ public class QRScanWindow extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("tableNumStr",tableNumStr);
                 startActivity(intent);
                 break;
+
         }
 
     }
