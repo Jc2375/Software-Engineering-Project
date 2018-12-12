@@ -1,8 +1,11 @@
 package com.example.vam1994.whyw8;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -20,6 +23,10 @@ import java.util.ArrayList;
  */
 public class ManagerInventory extends AppCompatActivity {
 
+    /**
+     * Refresh Button.
+     */
+    static Button refresh;
     private BarChart chart;
     /**
      * The Bar width.
@@ -50,31 +57,49 @@ public class ManagerInventory extends AppCompatActivity {
         chart.setDrawBarShadow(false);
         chart.setDrawGridBackground(false);
 
-        int total = 7;
-
-        ArrayList<String> xValues = new ArrayList<>();
-        xValues.add("Tomato");
-        xValues.add("Onions");
-        xValues.add("Pickles");
-        xValues.add("Beef");
-        xValues.add("Fries");
-        xValues.add("Beans");
-        xValues.add("Chicken");
-
-        ArrayList<BarEntry> yValues = new ArrayList<>();
-        yValues.add(new BarEntry(1, 30));
-        yValues.add(new BarEntry(2, 18));
-        yValues.add(new BarEntry(3, 8));
-        yValues.add(new BarEntry(4, 99));
+        final ArrayList<BarEntry> yValues = new ArrayList<>();
+        yValues.add(new BarEntry(1, 64));
+        yValues.add(new BarEntry(2, 58));
+        yValues.add(new BarEntry(3, 45));
+        yValues.add(new BarEntry(4, 83));
         yValues.add(new BarEntry(5, 38));
-        yValues.add(new BarEntry(6, 20));
+        yValues.add(new BarEntry(6, 74));
         yValues.add(new BarEntry(7, 38));
+
+        setBarData(yValues);
+
+        refresh = (Button)findViewById(R.id.refreshButton);
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(yValues.get(0).getY() != 62) {
+                    yValues.set(0, new BarEntry(1, 62));
+                    yValues.set(1, new BarEntry(2, 56));
+                    yValues.set(2, new BarEntry(3, 41));
+                }
+                else
+                    yValues.set(3, new BarEntry(4,81));
+                setBarData(yValues);
+            }
+        });
+    }
+
+    private void setBarData(ArrayList<BarEntry> yValues){
+        ArrayList<String> xValues = new ArrayList<>();
+        xValues.add("Pepper");
+        xValues.add("Burger");
+        xValues.add("Chicken");
+        xValues.add("Fries");
+        xValues.add("IceCream");
+        xValues.add("Meat");
+        xValues.add("Pizza");
+        xValues.add("Steak");
 
         BarDataSet barDataSet = new BarDataSet(yValues, "Item");
         barDataSet.setValueTextColor(Color.YELLOW);
+        barDataSet.setValueTextSize(20);
         //barDataSet.setColor(Color.YELLOW);
         BarData barData = new BarData(barDataSet);
-
 
         barData.setValueFormatter(new LargeValueFormatter());
         chart.setData(barData);
@@ -82,7 +107,6 @@ public class ManagerInventory extends AppCompatActivity {
         chart.getData().setHighlightEnabled(false);
         chart.getAxisRight().setEnabled(false);
         chart.invalidate();
-
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setGranularity(1f);
@@ -103,7 +127,7 @@ public class ManagerInventory extends AppCompatActivity {
         YAxis yAxis = chart.getAxisLeft();
         yAxis.setValueFormatter(new LargeValueFormatter());
         yAxis.setDrawGridLines(true);
-        yAxis.setAxisMaximum(120);
+        yAxis.setAxisMaximum(100);
         yAxis.setAxisMinimum(0);
         yAxis.setTextColor(Color.WHITE);
         yAxis.setXOffset(2f);

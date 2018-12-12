@@ -49,4 +49,13 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/deliveredButton" />
 
+    <Button
+        android:id="@+id/clocking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/deliveredButton"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:text="Clock In/Out" />
+
 </RelativeLayout>
